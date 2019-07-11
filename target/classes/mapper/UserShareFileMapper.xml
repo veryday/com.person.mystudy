@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserShareFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.model.UserShareFile">
+        <id column="SHARE_FILE_ID" property="shareFileId" />
+        <result column="SHARE_TIME" property="shareTime" />
+        <result column="SHARE_TYPE" property="shareType" />
+        <result column="FILE_OPTION_DATA" property="fileOptionData" />
+        <result column="FILE_TOKEN" property="fileToken" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SHARE_FILE_ID, SHARE_TIME, SHARE_TYPE, FILE_OPTION_DATA, FILE_TOKEN
+    </sql>
+
+</mapper>

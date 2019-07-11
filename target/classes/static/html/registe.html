@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册</title>
+<Script src="../../../static/js/jquery-1.4.2.js"></script>
+</head>
+<body align="center">
+	<p>注册</p>
+		<form id="userinfoForm">
+			账号：<input type="text" name="accountNumber" /><br>
+			 密码：<input type="password" name="passwordv" /><br> 
+			 昵称：<input type="text" name="nickName" /><br>
+			  名称：<input type="text" name="name" /><br>
+			性别：<input type="text" name="sex" /><br>
+		</form>
+		<p>
+		<button onclick="postUserInfo()">提交</button>
+		</p>
+	
+</body>
+<script>
+function postUserInfo(){
+	//获取表单数据，并序列化
+	var formData = $("#userinfoForm").serializeArray();
+	//将序列化数据转为对象
+	var formObject = {};
+	for (var item in formData) {
+	    formObject[formData[item].name] = formData[item].value;
+	}
+	formData = JSON.stringify(formObject);
+	//发送JSON到服务器
+	$.ajax({
+		type: "POST",
+	    url: "/user/registe",
+	    contentType: "application/json",  //一定要设置这一行，很关键
+	    data : formData,
+	    dataType: 'json',
+	    success:function(res){
+	    	if(res.code == '-1'){
+	    		alert("注册失败");
+	    	}else{
+	    		location.href="/login";
+	    	}
+	    },
+	    error:function(res){
+	    	alert("系统繁忙");
+	    }
+	});
+}
+</script>
+</html>

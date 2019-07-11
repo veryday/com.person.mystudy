@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登入</title>
+</head>
+<body align="center">
+<p>登入</p>
+<p>
+<video  src="../static/vedio/happyfit2.mp4"  controls></video>
+</p>
+<form action="../user/login" method="POST">
+<p>
+         <span th:text="${msg}"></span><br>
+     账号：<input type="text" name="account"/><br>
+     密码：<input type="password" name="password"/>
+</p>
+<p>
+    <input type="submit"/><a href="/registe">去注册</a>
+</p>
+</form>
+</body>
+</html>

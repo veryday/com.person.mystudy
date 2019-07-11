@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.model.UserFile">
+        <id column="FILE_ID" property="fileId" />
+        <result column="FILE_NAME" property="fileName" />
+        <result column="FILE_PATH" property="filePath" />
+        <result column="FILE_OWER_ID" property="fileOwerId" />
+        <result column="FILE_SIZE" property="fileSize" />
+        <result column="FILE_OPTION_DATA" property="fileOptionData" />
+        <result column="FILE_ROOT_PATH" property="fileRootPath" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        FILE_ID, FILE_NAME, FILE_PATH, FILE_OWER_ID, FILE_SIZE, FILE_OPTION_DATA, FILE_ROOT_PATH
+    </sql>
+
+</mapper>

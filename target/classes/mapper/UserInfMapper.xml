@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserInfMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.model.UserInf">
+        <id column="USER_ID" property="userId" />
+        <result column="NAME" property="name" />
+        <result column="NICK_NAME" property="nickName" />
+        <result column="ACCOUNT_NUMBER" property="accountNumber" />
+        <result column="PASSWORD" property="password" />
+        <result column="PASSWORDV" property="passwordv" />
+        <result column="SEX" property="sex" />
+        <result column="AGE" property="age" />
+        <result column="PHOTO" property="photo" />
+        <result column="EMAIL" property="email" />
+        <result column="ADRESS" property="adress" />
+        <result column="POWER" property="power" />
+        <result column="EFFECTIVE" property="effective" />
+        <result column="RESASON" property="resason" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        USER_ID, NAME, NICK_NAME, ACCOUNT_NUMBER, PASSWORD, PASSWORDV, SEX, AGE, PHOTO, EMAIL, ADRESS, POWER, EFFECTIVE, RESASON
+    </sql>
+
+</mapper>
