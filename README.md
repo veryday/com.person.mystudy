@@ -1,2 +1,3 @@
 # com.person.mystudy
-study code
+
+本项目的代码只为学习编程而创建的。
